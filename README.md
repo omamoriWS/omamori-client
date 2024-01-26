@@ -57,8 +57,8 @@ For building and running the application you need:
 <h3>Installation</h3>
 
 ```
-$ git clone https://github.com/NextTeamB/ONEHOUR
-$ cd ONEHOUR
+$ git clone https://github.com/omamoriWS/client
+$ cd omamori
 ```
 
 <br/>
@@ -66,15 +66,14 @@ $ cd ONEHOUR
 
 ```
 MAKE A ".env.local" FILE
-MONGODB_URL : YOUR MONGODB URL HERE
-SECRET_KEY : YOUR SECRET KEY HERE
+작성 예정입니다
 ```
 
 <br/>
 <h4>Front end</h4>
 
 ```
-$ cd ONEHOUR
+$ cd omamori
 $ npm install
 $ npm run dev
 ```
@@ -174,22 +173,9 @@ $ npm run dev
 
 <h2>주요 기능</h2>
 <br/>
-<h3>✅ 목표 기록 및 타이머 기능 제공</h3>
+<h3>✅ 작성 예정입니다</h3>
 
-- 60분 분량의 타이머 기능 제공
-- 현재 목표의 달성률 확인 가능
-
-<h3>✅ 유저 소통 게시판 제공</h3>
-
-- 커뮤니티 기능 제공
-- 커뮤니티 기능에 필요한 제반사항 제공
-
-<h3>✅ 유저 목표 데이터 요약</h3>
-
-- 유저의 모든 목표 기록을 카드 형식으로 제공
-- 달성도 (실패 / 수행 / 성공) 상태에 따라 다른 UI 제공
-- 전체 데이터 요약 그래프 및 인차트 레포트 제공
-- 수행 기록 기반 요약 제표 제공
+- 작성 예정입니다
 <br/>
 <br/>
 <h2>디렉토리 구조(수정됨)</h2>
@@ -203,34 +189,13 @@ $ npm run dev
 <br/>
 <h3>페이지 구현</h3>
 
-- "/" 페이지 작업 완료
-- "/info" 페이지 작업 완료
-- "/login" 페이지 작업 완료
-- "/sign-up" 페이지 작업 완료
-- "/dashboard" 페이지 작업 완료
-- "/dashboard/challengers" 페이지 작업 완료
-- "/dashboard/challenge" 페이지 작업 완료
-- "/dashboard/challenge/new-challenge" 페이지 작업 완료
-- "/dashboard/challenge/ongoing-challenge" 페이지 작업 완료
-- "/dashboard/records" 페이지 작업 완료
-- "/dashboard/settings" 페이지 작업 완료
-- "/dashboard/time-ranking" 페이지 작업 완료
+- 작업 예정입니다
 
 <br/>
 
 <h3>API 구현</h3>
 
-- /login 페이지 API 구현 완료
-- /sign-up 페이지 API 구현 완료
-- 로그인 유지 /refresh API 구현 완료
-- 게시판 관련 API 구현 완료
-- 유저 목표 기록 관련 API 구현 완료
-- 회원 정보 수정 및 삭제 API 구현 완료
-- 유저 랭킹 관련 API 구현 완료
-- 유저 랭킹 데이터 페이징 처리 구현 완료
-- 이미지 버킷 연동 및 이미지 웹 마운트 구현 완료
-- 요약 제표 API 구현 완료
-- 반응형 웹 구현 완료
+- 작업 예정입니다
 <br/>
 <br/>
 
