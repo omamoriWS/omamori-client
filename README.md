@@ -25,10 +25,14 @@
 <table align="center">
   <tbody>
     <tr>
-      <td align="center"><a href=""><img src="https://github.com/NextTeamB/ONEHOUR/assets/109796814/6a47d607-1f21-40dd-ac88-bfe0b7699eb9" width="300px;" alt=""/><br /><sub><b>FE 팀장 : 장수현</b></sub></a><br /></td>
-      <td align="center"><a href=""><img src="https://github.com/NextTeamB/ONEHOUR/assets/109796814/d7d17baa-41ec-4057-afcb-601d98240084" width="300px;" alt=""/><br /><sub><b>FE 팀원 : 강해솔</b></sub></a><br /></td>
-      <td align="center"><a href=""><img src="https://github.com/NextTeamB/ONEHOUR/assets/109796814/1595e1b5-6dda-4864-a12b-a27dba14cf72" width="300px;" alt=""/><br /><sub><b>FE 팀원 : 김시훈</b></sub></a><br /></td>
+      <td align="center"><a href=""><img src="https://github.com/omamoriWS/client/assets/109796814/3a608e3e-ce9d-429e-a6cd-c0d6eaa9d6b6" width="300px;" alt=""/><br /><sub><b>프로젝트 팀장 : 강해솔</b></sub></a><br /></td>
+      <td align="center"><a href=""><img src="https://github.com/omamoriWS/client/assets/109796814/b137f7fb-0735-46dd-98e1-813fbfa73b90" width="300px;" alt=""/><br /><sub><b>FE 팀원 : 김시훈</b></sub></a><br /></td>
+      <td align="center"><a href=""><img src="https://github.com/omamoriWS/client/assets/109796814/be85468a-f2c3-41a8-a699-8f31d5fb6a7d" width="300px;" alt=""/><br /><sub><b>FE 팀원 : 임화랑</b></sub></a><br /></td>
      <tr/>
+    <tr>
+      <td align="center"><a href=""><img src="https://github.com/omamoriWS/client/assets/109796814/1334682e-0d2c-478a-b73b-2db9f4931620" width="300px;" alt=""/><br /><sub><b>BE 팀원 : 유예지</b></sub></a><br /></td>
+      <td align="center"><a href=""><img src="https://github.com/omamoriWS/client/assets/109796814/20f12532-80a1-4a6c-affc-4a0e5600ab75" width="300px;" alt=""/><br /><sub><b>FE 팀원 : 장수현</b></sub></a><br /></td>
+    </tr>
   </tbody>
 </table>
 <br/>
