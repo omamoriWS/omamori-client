@@ -13,10 +13,10 @@ assignees: ''
 
 <br/>
 
-## Documentation List 📄
+## Documentation List 📄
 
-- [] 문서 개요을 작성해주세요
-- [] 문서 공유 경로로 작성해주세요 (ex. Notion / Slack )
+- [ ] 문서 개요를 작성해주세요
+- [ ] 문서 공유 경로로 작성해주세요 (ex. Notion / Slack )
 
 <br/>
 

@@ -13,10 +13,10 @@ assignees: ''
 
 <br/>
 
-## Deploy implementations 📄
+## Deploy implementations 📄
 
-- [] 배포 방식을 작성해주세요
-- [] 작업 사항을 작성해주세요
+- [ ] 배포 방식을 작성해주세요
+- [ ] 작업 사항을 작성해주세요
 
 <br/>
 
