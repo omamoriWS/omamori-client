@@ -1,7 +1,7 @@
 ---
 name: "\U0001F30E Deploy"
 about: "\U0001F30E Deploy 이슈 생성"
-title: ''
+title: "[DEPLOY]"
 labels: "\U0001F30E Deploy"
 assignees: ''
 

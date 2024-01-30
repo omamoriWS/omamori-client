@@ -1,7 +1,7 @@
 ---
 name: "\U0001F4A5 Bugfix"
 about: "\U0001F4A5 Bugfix 이슈 생성"
-title: ''
+title: "[BUGFIX]"
 labels: "\U0001F4A5 Bugfix"
 assignees: ''
 

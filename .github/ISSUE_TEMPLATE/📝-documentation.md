@@ -1,7 +1,7 @@
 ---
 name: "\U0001F4DD Documentation"
 about: "\U0001F4DD Documentation 이슈 생성"
-title: ''
+title: "[DOCUMENTATION]"
 labels: "\U0001F4DD Documentation/Etc"
 assignees: ''
 
