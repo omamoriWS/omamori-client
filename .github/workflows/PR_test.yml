@@ -4,7 +4,7 @@ name: PR Test
 on: 
 	pull_request:   #pr이벤트를 감지
     	branches:
-        	- test  #test라는 브랜치에 한해서
+        	- main  #test라는 브랜치에 한해서
 
 jobs: 
 	Run Jest:
