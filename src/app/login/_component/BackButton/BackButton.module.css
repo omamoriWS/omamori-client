@@ -1,0 +1,13 @@
+.button {
+  width: 80%;
+  height: 3rem;
+  background-color: #d3d3d3;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.button:hover {
+  cursor: pointer;
+}
