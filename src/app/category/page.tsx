@@ -9,18 +9,34 @@ import { useRouter } from "../../../node_modules/next/navigation";
 
 const category = () => {
   const [checkpoint, setCheckpoint] = useState(0);
+  // 카테고리 선택 후 다음 컴포넌트 표기
   const onSetCheckpoint = (num: number) => {
-    setCheckpoint(checkpoint + num);
+    setTimeout(() => {
+      setCheckpoint(checkpoint + num);
+    }, 1000);
   };
+  // State 초기화 -> 카테고리 재선택
   const resetCheckpoint = () => {
     setCheckpoint(0);
   };
+
+  const returnComponents = () => {
+    if (checkpoint === 0) {
+      return <SelectCategory updateState={onSetCheckpoint} />;
+    } else if (checkpoint === 1) {
+      return <LoadingComponent updateState={onSetCheckpoint} />;
+    } else if (checkpoint === 2) {
+      return <Result resetState={resetCheckpoint} />;
+    }
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.upper}>
         {/* <SelectCategory updateState={onSetCheckpoint} /> */}
-        <LoadingComponent />
+        {/* <LoadingComponent /> */}
         {/* <Result resetState={resetCheckpoint} /> */}
+        {returnComponents()}
       </div>
     </div>
   );
@@ -64,7 +80,12 @@ const SelectCategory = (props: any) => {
   );
 };
 
-const LoadingComponent = () => {
+const LoadingComponent = (props: any) => {
+  useEffect(() => {
+    setTimeout(() => {
+      props.updateState(1);
+    }, 3000);
+  }, []);
   return (
     <>
       <h2>모리가 기운을 불어넣고있어요</h2>
@@ -86,7 +107,7 @@ const Result = (props: any) => {
         <div>
           <button
             onClick={() => {
-              props.resetState;
+              props.resetState();
             }}
           >
             다시선택
