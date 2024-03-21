@@ -10,10 +10,16 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.content}>
-        <Image src={LOGO} className={styles.LOGO} />
+        <Image src={LOGO} className={styles.LOGO} alt="logo" />
         <h1>오마이모리</h1>
         <h2>커스터마이즈드 오마모리 만들기</h2>
-        <button onClick={() => {router.push("/intro")}}>제작하러 가기</button>
+        <button
+          onClick={() => {
+            router.push("/intro");
+          }}
+        >
+          제작하러 가기
+        </button>
       </div>
     </main>
   );

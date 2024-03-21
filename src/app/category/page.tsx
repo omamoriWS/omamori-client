@@ -6,21 +6,55 @@ import img2 from "../../../public/process_2.png";
 import Image from "../../../node_modules/next/image";
 import love from "../../../public/love.png";
 import { useRouter } from "../../../node_modules/next/navigation";
+import { useDispatch } from "react-redux";
+import { selectCategory } from "@/redux/slices/userSlice";
 
 const category = () => {
+  // 컴포넌트 분기 설정
   const [checkpoint, setCheckpoint] = useState(0);
-  const onSetCheckpoint = (num: number) => {
-    setCheckpoint(checkpoint + num);
+  // 카테고리 선택 값 저장
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  // 자식 컴포넌트에서 카테고리 선택 시 반영 함수
+  const setCategoryName = (value: string) => {
+    setSelectedCategory(value);
   };
+
+  // 카테고리 선택 후 다음 컴포넌트 표기
+  const onSetCheckpoint = (num: number) => {
+    setTimeout(() => {
+      setCheckpoint(checkpoint + num);
+    }, 1000);
+  };
+  // State 초기화 -> 카테고리 재선택
   const resetCheckpoint = () => {
     setCheckpoint(0);
   };
+
+  const returnComponents = () => {
+    if (checkpoint === 0) {
+      return (
+        <SelectCategory
+          updateState={onSetCheckpoint}
+          setCategoryName={setCategoryName}
+        />
+      );
+    } else if (checkpoint === 1) {
+      return <LoadingComponent updateState={onSetCheckpoint} />;
+    } else if (checkpoint === 2) {
+      return (
+        <Result resetState={resetCheckpoint} categoryname={selectedCategory} />
+      );
+    }
+  };
+
   return (
     <div className={styles.main}>
       <div className={styles.upper}>
         {/* <SelectCategory updateState={onSetCheckpoint} /> */}
-        <LoadingComponent />
+        {/* <LoadingComponent /> */}
         {/* <Result resetState={resetCheckpoint} /> */}
+        {returnComponents()}
       </div>
     </div>
   );
@@ -51,6 +85,7 @@ const SelectCategory = (props: any) => {
                 <button
                   onClick={() => {
                     props.updateState(1);
+                    props.setCategoryName(a);
                   }}
                   key={a}
                 >
@@ -64,7 +99,12 @@ const SelectCategory = (props: any) => {
   );
 };
 
-const LoadingComponent = () => {
+const LoadingComponent = (props: any) => {
+  useEffect(() => {
+    setTimeout(() => {
+      props.updateState(1);
+    }, 3000);
+  }, []);
   return (
     <>
       <h2>모리가 기운을 불어넣고있어요</h2>
@@ -77,6 +117,7 @@ const LoadingComponent = () => {
 };
 
 const Result = (props: any) => {
+  const dispatch = useDispatch();
   const router = useRouter();
   return (
     <>
@@ -86,7 +127,7 @@ const Result = (props: any) => {
         <div>
           <button
             onClick={() => {
-              props.resetState;
+              props.resetState();
             }}
           >
             다시선택
@@ -94,6 +135,8 @@ const Result = (props: any) => {
           <button
             onClick={() => {
               router.push("/customize");
+              // navigate("/customize", { state: props.categoryname });
+              dispatch(selectCategory(props.categoryname));
             }}
           >
             다음으로
