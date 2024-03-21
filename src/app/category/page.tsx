@@ -8,7 +8,18 @@ import love from "../../../public/love.png";
 import { useRouter } from "../../../node_modules/next/navigation";
 
 const category = () => {
+  // 컴포넌트 분기 설정
   const [checkpoint, setCheckpoint] = useState(0);
+  // 카테고리 선택 값 저장
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  // 자식 컴포넌트에서 카테고리 선택 시 반영 함수
+  const setCategoryName = (value: string) => {
+    setTimeout(() => {
+      setCategoryName(value);
+    }, 1000);
+  };
+
   // 카테고리 선택 후 다음 컴포넌트 표기
   const onSetCheckpoint = (num: number) => {
     setTimeout(() => {
@@ -22,11 +33,18 @@ const category = () => {
 
   const returnComponents = () => {
     if (checkpoint === 0) {
-      return <SelectCategory updateState={onSetCheckpoint} />;
+      return (
+        <SelectCategory
+          updateState={onSetCheckpoint}
+          setCategoryName={setCategoryName}
+        />
+      );
     } else if (checkpoint === 1) {
       return <LoadingComponent updateState={onSetCheckpoint} />;
     } else if (checkpoint === 2) {
-      return <Result resetState={resetCheckpoint} />;
+      return (
+        <Result resetState={resetCheckpoint} categoryname={selectedCategory} />
+      );
     }
   };
 
@@ -67,6 +85,7 @@ const SelectCategory = (props: any) => {
                 <button
                   onClick={() => {
                     props.updateState(1);
+                    props.setCategoryName(a);
                   }}
                   key={a}
                 >
@@ -115,6 +134,7 @@ const Result = (props: any) => {
           <button
             onClick={() => {
               router.push("/customize");
+              // navigate("/customize", { state: props.categoryname });
             }}
           >
             다음으로
