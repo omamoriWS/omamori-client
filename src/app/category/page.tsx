@@ -6,6 +6,8 @@ import img2 from "../../../public/process_2.png";
 import Image from "../../../node_modules/next/image";
 import love from "../../../public/love.png";
 import { useRouter } from "../../../node_modules/next/navigation";
+import { useDispatch } from "react-redux";
+import { selectCategory } from "@/redux/slices/userSlice";
 
 const category = () => {
   // 컴포넌트 분기 설정
@@ -15,9 +17,7 @@ const category = () => {
 
   // 자식 컴포넌트에서 카테고리 선택 시 반영 함수
   const setCategoryName = (value: string) => {
-    setTimeout(() => {
-      setCategoryName(value);
-    }, 1000);
+    setSelectedCategory(value);
   };
 
   // 카테고리 선택 후 다음 컴포넌트 표기
@@ -117,6 +117,7 @@ const LoadingComponent = (props: any) => {
 };
 
 const Result = (props: any) => {
+  const dispatch = useDispatch();
   const router = useRouter();
   return (
     <>
@@ -135,6 +136,7 @@ const Result = (props: any) => {
             onClick={() => {
               router.push("/customize");
               // navigate("/customize", { state: props.categoryname });
+              dispatch(selectCategory(props.categoryname));
             }}
           >
             다음으로
