@@ -15,9 +15,9 @@
 }
 
 /* 더 작은 모바일 */
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   html {
-    font-size: 8px;
+    font-size: 6px;
   }
 }
 

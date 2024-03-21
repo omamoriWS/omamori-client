@@ -12,6 +12,7 @@
     "@types/prettier": "3.0.0",
     "eslint-config-naver": "^2.1.0",
     "next": "14.1.0",
+    "node": "^21.7.1",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.71.1",
