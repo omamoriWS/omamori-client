@@ -1,0 +1,38 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.form section {
+  margin: 0.8rem 0;
+}
+.form label {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+}
+.form input {
+  height: 2.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+}
+.emailSection {
+  display: flex;
+  flex-direction: column;
+}
+.passwordSection {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  background-color: #76cc8d;
+  width: 100%;
+  height: 3rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+.button:hover {
+  cursor: pointer;
+}
