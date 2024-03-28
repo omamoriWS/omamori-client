@@ -2,11 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 type AuthState = {
   isAuth: boolean;
   username: string;
+  category: string;
   email: string;
   accessToken: string;
 };
 const initialState = {
   isAuth: false,
+  category: "",
   username: "",
   email: "",
   accessToken: "",
@@ -29,6 +31,9 @@ const userSlice = createSlice({
     changeUsername: (state, action) => {
       state.username = action.payload;
     },
+    selectCategory: (state, action) => {
+      state.category = action.payload;
+    },
   },
   //   extraReducers: (builder) => {
   //     builder.addCase(PURGE, () => {
@@ -37,5 +42,6 @@ const userSlice = createSlice({
   //   },
 });
 
-export const { logOut, logIn, changeUsername } = userSlice.actions;
+export const { logOut, logIn, changeUsername, selectCategory } =
+  userSlice.actions;
 export default userSlice.reducer;
