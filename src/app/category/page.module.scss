@@ -1,0 +1,123 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.main {
+  margin-top: -1rem;
+  margin-left: -0.9rem;
+  margin-bottom: -1rem;
+  padding-top: 2rem;
+  background-image: url(../../../public/processBG.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100vw;
+  height: 97.9vh;
+  .upper {
+    margin: 15rem auto;
+    h2 {
+      letter-spacing: -1px;
+      font-size: 2rem;
+      text-align: center;
+      margin: 0rem auto 4rem auto;
+      animation: fadein 3s ease-in;
+      font-family: "A_M";
+    }
+    .categoryBox {
+      animation: fadein 3s ease-in;
+      display: flex;
+      width: 96vw;
+      height: 52vh;
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: center;
+      margin: 1rem auto;
+      justify-content: center;
+      align-items: center;
+      button {
+        background-color: white;
+        border: 1px solid #e1e2e3;
+        border-radius: 0.2rem;
+        font-size: 1.8rem;
+        font-family: "A_M";
+        font-weight: 700;
+        width: 10rem;
+        height: 10rem;
+        margin: 1rem 1rem;
+        transition: 0.8s ease-in-out;
+        &:hover {
+          background-color: rgb(118, 204, 141, 0.05);
+          border: 1.4px solid #75cc8c;
+          transform: scale(1.02);
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+    .content {
+      animation: fadein 3s ease-in;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .img2 {
+        width: 28rem;
+        height: auto;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+      }
+      button {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 100px;
+        margin: 5rem auto;
+        background-color: #76cc8d;
+        border: none;
+      }
+    }
+    .resultBox {
+      animation: fadein 3s ease-in;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .love {
+        width: 22rem;
+        height: auto;
+        margin-top: 6rem;
+        margin-bottom: 10rem;
+      }
+      button {
+        border-radius: 10rem;
+        border: none;
+        width: 14rem;
+        height: 5rem;
+        margin: 0 1.2rem;
+        font-family: "A_M";
+        font-weight: 600;
+        letter-spacing: -1px;
+        &:nth-child(1) {
+          background-color: #cecece;
+          color: white;
+        }
+        &:nth-child(2) {
+          background-color: #76cc8d;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,14 +1,21 @@
 "use client";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { useEffect } from "react";
+import { usePathname, useRouter } from "../../../node_modules/next/navigation";
 import styles from "./page.module.scss";
 import Image from "../../../node_modules/next/image";
 import img1 from "../../../public/1.png";
 import img2 from "../../../public/2.png";
 import img3 from "../../../public/3.png";
+import img4 from "../../../public/4.png";
 import img5 from "../../../public/5.png";
+import arrow from "../../../public/arrow.png";
 
 const page = () => {
+  const router = useRouter();
+  const pathname = usePathname();
   const [numbering, setNumbering] = useState(1);
+  const [checkpoint, setCheckpoint] = useState(true);
   const returnComponent = () => {
     if (numbering === 1) {
       return (
@@ -37,10 +44,20 @@ const page = () => {
     } else if (numbering === 4) {
       return (
         <>
+          <Image4 />
+          <br />
           <Intro4 />
         </>
       );
     } else if (numbering === 5) {
+      // useEffect(()=>{
+      setTimeout(() => {
+        setCheckpoint(false);
+      }, 50);
+      console.log(checkpoint);
+      console.log(numbering);
+      // }, [])
+
       return (
         <>
           <Image5 />
@@ -50,22 +67,30 @@ const page = () => {
       );
     }
   };
+
   return (
     <div className={styles.main}>
       <div className={styles.content}>
         {/* <Image1 />
         <Intro1 /> */}
         {returnComponent()}
+        <button
+          className={checkpoint ? styles.nobutton2 : styles.button2}
+          onClick={() => {
+            router.push("/category");
+          }}
+        >
+          시작하기
+        </button>
       </div>
       <button
-        className={styles.button}
+        className={checkpoint ? styles.button : styles.nobutton}
         onClick={() => {
           setNumbering(numbering + 1);
         }}
       >
-        다음
+        <Image src={arrow} className={styles.arrow} alt="arrow" />
       </button>
-      <button>시작하기</button>
     </div>
   );
 };
@@ -95,7 +120,11 @@ const Image3 = () => {
 };
 
 const Image4 = () => {
-  return <></>;
+  return (
+    <>
+      <Image src={img4} className={styles.img4} alt="img4" />
+    </>
+  );
 };
 
 const Image5 = () => {
