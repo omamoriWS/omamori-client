@@ -1,0 +1,39 @@
+.upper {
+  width: 100vw;
+  height: 100vh;
+  margin-top: -1rem;
+  margin-bottom: -1.2rem;
+  margin-left: -1rem;
+  .form {
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      width: 18rem;
+      height: auto;
+      margin-bottom: -1rem;
+    }
+    .kakaoLogin {
+      width: 28rem;
+      height: auto;
+      margin-top: 5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-family: "A_M";
+      font-weight: 800;
+      margin: 2rem auto;
+    }
+    button {
+      border: none;
+      font-family: "A_M";
+      font-weight: 700;
+      border-radius: 0.4rem;
+      width: 28rem;
+      height: 4.2rem;
+      margin: 2rem auto;
+    }
+  }
+}

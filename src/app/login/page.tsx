@@ -1,23 +1,34 @@
-import styles from "./Login.module.css";
-import BackButton from "./_component/BackButton/BackButton";
-import KakaoLoginModal from "./_component/KakaoLoginModal/KakaoLoginModal";
-import LoginForm from "./_component/LoginForm/LoginForm";
-export default function loginPage() {
+"use client";
+import React from "react";
+import styles from "@/src/app/login/page.module.scss";
+import Image from "next/image";
+import logo from "@/public/logo_jp.png";
+import kakaoLogin from "@/public/kakaoLoginBtn.png";
+import { useRouter } from "next/navigation";
+
+const page = () => {
+  const router = useRouter();
   return (
-    <div className={styles.container}>
-      <div className={styles.logoSection}>
-        <img src={"/오마모리_로고.png"} alt="logo" />
+    <div className={styles.upper}>
+      <div className={styles.form}>
+        <Image className={styles.logo} src={logo} alt="logo" />
+        <h2>서비스 이용을 위해 로그인해주세요</h2>
+        <Image
+          onClick={() => {}}
+          className={styles.kakaoLogin}
+          src={kakaoLogin}
+          alt="kakaoLogin"
+        />
+        <button
+          onClick={() => {
+            router.back();
+          }}
+        >
+          뒤로가기
+        </button>
       </div>
-      <div className={styles.span}>서비스 이용을 위해 로그인해주세요</div>
-      {/* <section className={styles.formSection}>
-        <LoginForm />
-      </section> */}
-      <section className={styles.kakaoButton}>
-        <KakaoLoginModal />
-      </section>
-      <section className={styles.backButton}>
-        <BackButton />
-      </section>
     </div>
   );
-}
+};
+
+export default page;
