@@ -15,7 +15,7 @@ export default function Home() {
         <h2>커스터마이즈드 오마모리 만들기</h2>
         <button
           onClick={() => {
-            router.push("/intro");
+            router.push("/login");
           }}
         >
           제작하러 가기
