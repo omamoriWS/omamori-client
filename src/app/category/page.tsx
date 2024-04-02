@@ -60,7 +60,7 @@ const category = () => {
   );
 };
 const SelectCategory = (props: any) => {
-  const [categories, setCategories] = useState<string[]>([
+  const categories = [
     "건강",
     "연애",
     "금전",
@@ -73,7 +73,7 @@ const SelectCategory = (props: any) => {
     "액막이",
     "신학기",
     "무탈",
-  ]);
+  ];
   return (
     <>
       <h2>친구에게 어떤 행운을 전해주고싶어요?</h2>
@@ -84,11 +84,10 @@ const SelectCategory = (props: any) => {
               <div key={i}>
                 <button
                   onClick={() => {
-                    props.updateState(1);
                     props.setCategoryName(a);
+                    props.updateState(1);
                   }}
-                  key={a}
-                >
+                  key={a}>
                   {a}
                 </button>
               </div>
@@ -128,8 +127,7 @@ const Result = (props: any) => {
           <button
             onClick={() => {
               props.resetState();
-            }}
-          >
+            }}>
             다시선택
           </button>
           <button
@@ -137,8 +135,7 @@ const Result = (props: any) => {
               router.push("/customize");
               // navigate("/customize", { state: props.categoryname });
               dispatch(selectCategory(props.categoryname));
-            }}
-          >
+            }}>
             다음으로
           </button>
         </div>
