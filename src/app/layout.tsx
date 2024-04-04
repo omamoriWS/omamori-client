@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "../../redux/provider";
+import AuthContext from "@/AuthContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ReduxProvider>{children}</ReduxProvider>
+        <AuthContext>
+          <ReduxProvider>{children}</ReduxProvider>
+        </AuthContext>
+        {/* NextAuth AuthContext로 감싸 세션 공유 상태 구현, ReduxProvider로 감싸 Redux store 접근 가능하도록 함 */}
       </body>
     </html>
   );
